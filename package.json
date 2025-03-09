@@ -1,0 +1,43 @@
+{
+  "name": "hit",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.0",
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-haptics": "~2",
+    "@tauri-apps/plugin-opener": "^2",
+    "@tauri-apps/plugin-store": "^2",
+    "@unocss/reset": "^66.1.0-beta.3",
+    "lodash-es": "^4.17.21",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.8.1",
+    "@eslint-react/eslint-plugin": "catalog:",
+    "@tauri-apps/cli": "^2",
+    "@types/lodash-es": "^4.17.12",
+    "@types/node": "^22.13.10",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@unocss/eslint-plugin": "catalog:",
+    "@unocss/preset-mini": "^66.1.0-beta.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "catalog:",
+    "eslint-plugin-format": "catalog:",
+    "eslint-plugin-react-hooks": "catalog:",
+    "eslint-plugin-react-refresh": "catalog:",
+    "typescript": "^5.6.2",
+    "unocss": "^66.1.0-beta.3",
+    "vite": "^6.0.3",
+    "vite-plugin-top-level-await": "^1.5.0"
+  }
+}
