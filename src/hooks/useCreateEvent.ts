@@ -7,7 +7,7 @@ export function useCreateEvent() {
 
   return {
     isLoading,
-    mutateAsync: useCallback(async (name: string, value: Pick<HitEvent, 'name' | 'remark' | 'initialValue'>) => {
+    mutateAsync: useCallback(async (name: string, value: Pick<HitEvent, 'name' | 'remark' | 'initialValue' | 'defaultStep'>) => {
       setIsLoading(true)
       try {
         const time = Date.now()

@@ -30,6 +30,7 @@ interface HitEvent {
   remark: string
   value: number
   initialValue: number
+  defaultStep: number
   created: number
   updated: number
 }

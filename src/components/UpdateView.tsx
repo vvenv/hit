@@ -27,7 +27,7 @@ export function UpdateView() {
             className="absolute inset-0 p-4 text-center text-9xl font-500 leading-none font-mono text-shadow-xl text-shadow-color-secondary"
             onClick={() => {
               update(v => ({
-                value: v.value + 1,
+                value: v.value + (v.defaultStep ?? 1),
               }))
               feedback()
             }}
@@ -69,6 +69,17 @@ export function UpdateView() {
           </Button>
           <Button
             className="absolute bottom-1 right-1 rounded-full p-5 btn-ghost-secondary"
+            onClick={() => {
+              update(v => ({
+                value: v.value + 1,
+              }))
+              feedback()
+            }}
+          >
+            <i className="i-hit-plus block size-4"></i>
+          </Button>
+          <Button
+            className="absolute bottom-1 left-1/2 rounded-full p-5 -translate-x-1/2 btn-ghost-secondary"
             onClick={() => {
               setLogsOpen(!logsOpen)
             }}
