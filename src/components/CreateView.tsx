@@ -18,7 +18,7 @@ export function CreateView() {
     >
       <h2 className="text-center text-2xl">New Event</h2>
       <Input
-        className="border-opacity-neutral w-full border border-neutral rounded-md bg-transparent px-5 py-3 text-center text-default"
+        className="w-full border border-neutral rounded-md bg-transparent px-5 py-3 text-center text-default border-opacity-neutral"
         type="text"
         placeholder="Name"
         value={name}
@@ -28,7 +28,7 @@ export function CreateView() {
         }}
       />
       <Textarea
-        className="border-opacity-neutral w-full border border-neutral rounded-md bg-transparent px-5 py-3 text-center text-default"
+        className="w-full border border-neutral rounded-md bg-transparent px-5 py-3 text-center text-default border-opacity-neutral"
         placeholder="Remark"
         rows={2}
         value={remark}
@@ -37,7 +37,7 @@ export function CreateView() {
         }}
       />
       <Input
-        className="border-opacity-neutral w-full border border-neutral rounded-md bg-transparent px-5 py-3 text-center text-default"
+        className="w-full border border-neutral rounded-md bg-transparent px-5 py-3 text-center text-default border-opacity-neutral"
         type="number"
         placeholder="Initial value"
         value={initialValue}
@@ -57,24 +57,6 @@ export function CreateView() {
           setConfig({ current: name })
           setView('update')
         }}
-      >
-        Create
-      </Button>
-      <Button
-        className="btn-secondary"
-        disabled={name === '' || isLoading}
-      >
-        Create
-      </Button>
-      <Button
-        className="btn-neutral"
-        disabled={name === '' || isLoading}
-      >
-        Create
-      </Button>
-      <Button
-        className="btn-danger"
-        disabled={name === '' || isLoading}
       >
         Create
       </Button>

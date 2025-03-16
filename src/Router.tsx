@@ -1,7 +1,6 @@
 import { useContext } from 'react'
 import { ConfigView } from './components/ConfigView'
 import { CreateView } from './components/CreateView'
-import { ProgressBar } from './components/ProgressBar'
 import { UpdateView } from './components/UpdateView'
 import { hitContext } from './contexts/hit'
 
@@ -10,7 +9,7 @@ export function Router() {
 
   return (
     <div className="grid grid-rows-[auto_1fr] h-100vh gap-8 p-8">
-      {isLoading && <ProgressBar />}
+      {isLoading && <div className="progress fixed left-0 right-0 top-0 h-0.5 bg-invert/10"></div>}
       {isPending || (
         <>
           {

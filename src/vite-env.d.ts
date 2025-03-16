@@ -21,6 +21,8 @@ interface HitConfig {
   current: string | null
   sound: boolean
   vibrant: boolean
+  history: boolean
+  weekday: boolean
 }
 
 interface HitEvent {
@@ -36,4 +38,5 @@ interface HitLog {
   from: Partial<HitEvent> | null
   to: Partial<HitEvent>
   time: number
+  remark?: string
 }

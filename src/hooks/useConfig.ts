@@ -6,6 +6,8 @@ const defaultConfig: HitConfig = {
   current: null,
   sound: false,
   vibrant: false,
+  history: false,
+  weekday: false,
 }
 
 export function useConfig() {

@@ -18,7 +18,39 @@ export function ConfigView() {
         </Button>
         <h1 className="text-2xl">Preference</h1>
       </header>
-      <main className="flex flex-col gap-4">
+      <main className="flex flex-col gap-4 border border-divider rounded-md p-4">
+        <h2 className="text-default/50">Appearance</h2>
+        <div className="border-b border-divider -mx-4"></div>
+        <Field className="flex items-center justify-between">
+          <Label htmlFor="history">Show history</Label>
+          <Switch
+            className="group h-6 w-11 inline-flex items-center border border-neutral rounded-full bg-neutral transition data-[checked]:border-secondary data-[checked]:bg-secondary"
+            id="history"
+            checked={config.history}
+            onChange={(history) => {
+              setConfig({ history })
+            }}
+          >
+            <span className="size-4 translate-x-1 rounded-full bg-neutral-contrast transition bg-opacity-neutral-contrast group-data-[checked]:translate-x-6 group-data-[checked]:bg-secondary-contrast group-data-[checked]:bg-opacity-secondary-contrast" />
+          </Switch>
+        </Field>
+        <div className="border-b border-divider -mx-4"></div>
+        <Field className="flex items-center justify-between">
+          <Label htmlFor="weekday">Show weekday</Label>
+          <Switch
+            className="group h-6 w-11 inline-flex items-center border border-neutral rounded-full bg-neutral transition data-[checked]:border-secondary data-[checked]:bg-secondary"
+            id="weekday"
+            checked={config.weekday}
+            onChange={(weekday) => {
+              setConfig({ weekday })
+            }}
+          >
+            <span className="size-4 translate-x-1 rounded-full bg-neutral-contrast transition bg-opacity-neutral-contrast group-data-[checked]:translate-x-6 group-data-[checked]:bg-secondary-contrast group-data-[checked]:bg-opacity-secondary-contrast" />
+          </Switch>
+        </Field>
+        <div className="border-b border-divider -mx-4"></div>
+        <h2 className="text-default/50">Interaction</h2>
+        <div className="border-b border-divider -mx-4"></div>
         <Field className="flex items-center justify-between">
           <Label htmlFor="sound">Sound</Label>
           <Switch
@@ -29,9 +61,10 @@ export function ConfigView() {
               setConfig({ sound })
             }}
           >
-            <span className="bg-neutral-contrast bg-opacity-neutral-contrast group-data-[checked]:bg-opacity-secondary-contrast size-4 translate-x-1 rounded-full transition group-data-[checked]:translate-x-6 group-data-[checked]:bg-secondary-contrast" />
+            <span className="size-4 translate-x-1 rounded-full bg-neutral-contrast transition bg-opacity-neutral-contrast group-data-[checked]:translate-x-6 group-data-[checked]:bg-secondary-contrast group-data-[checked]:bg-opacity-secondary-contrast" />
           </Switch>
         </Field>
+        <div className="border-b border-divider -mx-4"></div>
         <Field className="flex items-center justify-between">
           <Label htmlFor="vibrant">Vibrant</Label>
           <Switch
@@ -42,9 +75,10 @@ export function ConfigView() {
               setConfig({ vibrant })
             }}
           >
-            <span className="bg-neutral-contrast bg-opacity-neutral-contrast group-data-[checked]:bg-opacity-secondary-contrast size-4 translate-x-1 rounded-full transition group-data-[checked]:translate-x-6 group-data-[checked]:bg-secondary-contrast" />
+            <span className="size-4 translate-x-1 rounded-full bg-neutral-contrast transition bg-opacity-neutral-contrast group-data-[checked]:translate-x-6 group-data-[checked]:bg-secondary-contrast group-data-[checked]:bg-opacity-secondary-contrast" />
           </Switch>
         </Field>
+        <div className="border-b border-divider -mx-4"></div>
       </main>
     </>
   )
