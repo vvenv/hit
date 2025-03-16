@@ -1,4 +1,4 @@
-import { defineConfig, presetIcons, presetWind3, transformerDirectives } from 'unocss'
+import { defineConfig, presetIcons, presetWebFonts, presetWind3, transformerDirectives } from 'unocss'
 
 export default defineConfig({
   content: {
@@ -9,6 +9,13 @@ export default defineConfig({
   presets: [
     presetWind3({
       dark: 'media',
+    }),
+    presetWebFonts({
+      provider: 'google',
+      fonts: {
+        sans: ['Assistant'],
+        mono: ['JetBrains Mono'],
+      },
     }),
     presetIcons({
       collections: {
@@ -144,17 +151,6 @@ export default defineConfig({
       }
 
       html {
-        font-family:
-          Assistant,
-          Roboto,
-          Inter var,
-          ui-sans-serif,
-          system-ui,
-          sans-serif,
-          Apple Color Emoji,
-          Segoe UI Emoji,
-          Segoe UI Symbol,
-          Noto Color Emoji;
         scroll-padding-top: 80px;
       }
 
